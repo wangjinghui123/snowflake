@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Qr_Width_int>280</Qr_Width_int>
+  <Qr_Height_int>280</Qr_Height_int>
+  <Qr_Position_x>-244</Qr_Position_x>
+  <Qr_Position_y>322</Qr_Position_y>
+  <Qr_Width_int_game>369</Qr_Width_int_game>
+  <Qr_Height_int_game>369</Qr_Height_int_game>
+  <Qr_Position_x_game>-240</Qr_Position_x_game>
+  <Qr_Position_y_game>240</Qr_Position_y_game>
+</Config>
