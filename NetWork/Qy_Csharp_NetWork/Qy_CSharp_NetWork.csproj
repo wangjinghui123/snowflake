@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F52E2112-31A6-4709-B523-7B56DD931E56}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qy_CSharp_NetWork</RootNamespace>
+    <AssemblyName>Qy_Csharp_NetWork</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Qy_Csharp_NetWork.xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\Qy_Csharp_NetWork.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Component\JisightUnityComponent_LAM.cs" />
+    <Compile Include="Component\JisightLAMReadMe.cs" />
+    <Compile Include="Component\JisightLAM.cs" />
+    <Compile Include="Component\JisightLAMEnum.cs" />
+    <Compile Include="Component\JisightLAMEventArgs.cs" />
+    <Compile Include="DataFormat\JisightLAM\WebData\WebDataRevFormat.cs" />
+    <Compile Include="Tools\Other\GetMacAdress.cs" />
+    <Compile Include="Tools\Json\JsonTools.cs" />
+    <Compile Include="DataFormat\JisightLAM\JsonDataHandle\JsonDataHandle.cs" />
+    <Compile Include="DataFormat\JisightLAM\SocketData\SocketDataBaseClass.cs" />
+    <Compile Include="DataFormat\JisightLAM\SocketData\SocketDataRevFormat.cs" />
+    <Compile Include="DataFormat\JisightLAM\SocketData\SocketDataSndFormat.cs" />
+    <Compile Include="DataFormat\JisightLAM\SocketData\SocketDataBaseEnum.cs" />
+    <Compile Include="DataFormat\JisightLAM\SocketData\SocketDataBaseInter.cs" />
+    <Compile Include="DataFormat\JisightLAM\WebData\WebDataSndFormat.cs" />
+    <Compile Include="Qy_Socket\_1_SocketBaseDefinition\_2_1_SocketInter_TransmissionEvent.cs" />
+    <Compile Include="Qy_Socket\_1_SocketBaseDefinition\_0_0_SocketReadMe.cs" />
+    <Compile Include="Qy_Socket\_1_SocketBaseDefinition\_2_0_SocketInter_Transmission.cs" />
+    <Compile Include="Qy_Socket\_2_SocketTransmission\Tcp\References\SocketTransRef_EventArgs.cs" />
+    <Compile Include="Qy_Socket\_4_SocketEasyToUse\SocketsRef_Enum.cs" />
+    <Compile Include="Qy_Socket\_4_SocketEasyToUse\SocketsRef_EventArgs.cs" />
+    <Compile Include="WebNet\_1_WebBaseDefinition\_3_0_WebInter_UserTransProtocol.cs" />
+    <Compile Include="WebNet\_1_WebBaseDefinition\_0_0_ReadMe.cs" />
+    <Compile Include="WebNet\_1_WebBaseDefinition\_2_0_WebInter_Transmission.cs" />
+    <Compile Include="WebNet\_1_WebBaseDefinition\_2_1_WebInter_TransmissionEvent.cs" />
+    <Compile Include="WebNet\_2_WebTransmission\WebTransReference\HttpRef_EventArgs.cs" />
+    <Compile Include="WebNet\_2_WebTransmission\WebTransReference\HttpRef_Enum.cs" />
+    <Compile Include="WebNet\_2_WebTransmission\HTTP\HttpRequestQy.cs" />
+    <Compile Include="Qy_Socket\_2_SocketTransmission\Tcp\Sever\Sever_Manager.cs" />
+    <Compile Include="Qy_Socket\_4_SocketEasyToUse\SocketsClientController.cs" />
+    <Compile Include="Qy_Socket\_2_SocketTransmission\Tcp\Client\Client_Socket.cs" />
+    <Compile Include="Qy_Socket\_1_SocketBaseDefinition\_3_0_SocketInter_TransProtocol.cs" />
+    <Compile Include="Qy_Socket\_3_SocketOriginalDataUserTransProtocol\HEAD_BODY_Fromat\HeadBodyTcpProtocol.cs" />
+    <Compile Include="Qy_Socket\_2_SocketTransmission\Tcp\References\SocketTransRef_Enum.cs" />
+    <Compile Include="Tools\Debug\DebugTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qy_Socket\_2_SocketTransmission\Tcp\Sever\Sever_Socket.cs" />
+    <Compile Include="WebNet\_3_WebOriginalDataUserTransProtocol\KeepOriginalData\WebKeepOrigDataProtocol.cs" />
+    <Compile Include="WebNet\_4_WebNet\WebRef_EventArgs.cs" />
+    <Compile Include="WebNet\_4_WebNet\WebRef_Enum.cs" />
+    <Compile Include="WebNet\_4_WebNet\WebEasyHttpQy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Qy_Socket\_2_SocketTransmission\Udp\" />
+    <Folder Include="WebNet\_2_WebTransmission\WebRequest\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
