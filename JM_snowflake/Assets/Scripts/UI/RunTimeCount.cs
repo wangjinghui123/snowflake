@@ -154,7 +154,7 @@ public class RunTimeCount : MonoBehaviour
         _Second_Dacade.sprite = spritelists[_secondDacaed];
         _Second_Unit.sprite = spritelists[_seconUnit];
 
-        currentTime = 0;
+        currentTime = allRunTime ;
     }
 
 
@@ -168,7 +168,7 @@ public class RunTimeCount : MonoBehaviour
     private void _ChangeNum()
     {
 
-        currentTime += minDeltaTime;
+        currentTime -= minDeltaTime;
         if (Mathf.Abs((allRunTime - currentTime) - 7f) <= 0.01 && runTimeRemaining_5s != null)
         {
             Debug.Log("------------- runTimeRemaining_5s -----------------");
@@ -181,36 +181,36 @@ public class RunTimeCount : MonoBehaviour
             CancelInvoke("_ChangeNum");
             return;
         }
-        _seconUnit += int.Parse((minDeltaTime * 100).ToString());
+        _seconUnit -= int.Parse((minDeltaTime * 100).ToString());
         //Debug.Log(int.Parse((Time.fixedDeltaTime * 200).ToString()) + "   " + Time.fixedDeltaTime + "  " + Time.fixedDeltaTime * 100f + "  float   " + (int)2f);
         //lastSecond = _seconUnit;
-        if (_seconUnit >= 10)
+        if (_seconUnit <= 10)
         {
             _seconUnit = 0;
-            _secondDacaed += 1;
+            _secondDacaed -= 1;
         }
         // Debug.Log("lastSecond:" + lastSecond + "  currentSecond:" + _seconUnit);
-        if (_secondDacaed >= 10)
+        if (_secondDacaed <= 10)
         {
             _secondDacaed = 0;
-            _minuteUnit += 1;
+            _minuteUnit -= 1;
         }
-        if (_minuteUnit >= 10)
+        if (_minuteUnit <= 10)
         {
             _minuteUnit = 0;
-            _minuteDacade += 1;
+            _minuteDacade -= 1;
         }
-        if (_minuteDacade >= 6)
+        if (_minuteDacade <= 10)
         {
             _minuteDacade = 0;
-            _hourUnit += 1;
+            _hourUnit -= 1;
         }
-        if (_hourUnit >= 10)
+        if (_hourUnit <= 10)
         {
             _hourUnit = 0;
-            _hourDacade += 1;
+            _hourDacade -= 1;
         }
-        if (_hourDacade >= 10)
+        if (_hourDacade <= 10)
         {
             _hourDacade = 0;
             _hourUnit = 0;

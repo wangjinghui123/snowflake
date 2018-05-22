@@ -9,7 +9,7 @@ using UnityEngine.Video;
 
 public class SceneController : MonoBehaviour
 {
-    public const bool UNITYE_DEBUG = false  ;
+    public const bool UNITYE_DEBUG = false    ;
     public const bool NET_WORK_DEBUG = false  ;
     [SerializeField]
     private GameObject _movie;

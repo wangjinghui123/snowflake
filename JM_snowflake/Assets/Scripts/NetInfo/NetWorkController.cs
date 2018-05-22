@@ -78,6 +78,7 @@ public class NetWorkController : MonoBehaviour
     private void OnRoomVerify(object sender, string url)
     {
         Debug.Log("收到验证成功");
+        Debug.Log(sender +"\n"+"url:"+url );
         creatCode.CreatCode(url);     //返回生成二维码
         GameStarusIsReady();
     }

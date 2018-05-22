@@ -541,7 +541,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("'LatestEvent' is null. ");
         }
 
-        UI_Animation.runTime.StopTheRunTime();//UI停止计时
+       // UI_Animation.runTime.StopTheRunTime();//UI停止计时
         //UI_Animation.PlayeTheShoeAnima();//播放鞋子帧序列
 
         return RankList[0].transform;

@@ -8,7 +8,7 @@ using System;
 public class UIAnimation : MonoBehaviour
 {
     public List<RunkingUser> userRankList;
-    public RunTimeCount runTime;
+    public CountDown  runTime;
     public ShortTimeAnimation readyTime;
     public List<Image> onlyHeadPortriat;
 
@@ -28,7 +28,7 @@ public class UIAnimation : MonoBehaviour
     {
         runTime.gameObject.SetActive(false);
         readyTime.gameObject.SetActive(false);
-        runTime.allRunTime = runTimefloat;
+        runTime.TotalTime  =(int )runTimefloat;
         readyTime.readyTime = readyTimeInt;
 
     }

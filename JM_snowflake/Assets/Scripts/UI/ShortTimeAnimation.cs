@@ -11,7 +11,7 @@ using System;
 public class ShortTimeAnimation : MonoBehaviour
 {
     public EventHandler readyTimeDoneEvent;
-
+    public GameObject runTime;
     public int readyTime = 10;
 
     [SerializeField]
@@ -72,8 +72,16 @@ public class ShortTimeAnimation : MonoBehaviour
                 _number.enabled = false;
             }
             --i;
+            if (i==0)
+            {
+                runTime.SetActive(true);
+            }
             if (i == 0 && readyTimeDoneEvent != null)
+            {
                 readyTimeDoneEvent(this, null);
+               
+            }
+               
         }
 
     }
