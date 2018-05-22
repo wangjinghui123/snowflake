@@ -66,7 +66,7 @@ public class StepController : MonoBehaviour
 
         //流程2相关对象：父级，地形，人物模型，------------未来增加广告牌等
         stepTwo.SetActive(false);
-        terrianMoudle.SetActive(true);
+      //  terrianMoudle.SetActive(true);
 
     }
 }
