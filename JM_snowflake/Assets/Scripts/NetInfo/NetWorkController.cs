@@ -9,7 +9,7 @@ public delegate void GameMessageComeEvent(object sender, string msg);
 public delegate void TryLoginMsgDelegate(string userId, ref MsgTryLoginRes tryMsg);
 public class NetWorkController : MonoBehaviour
 {
-    public const string GAME_ID = "19";
+    public const string GAME_ID = "8";
     private CreateCode creatCode;
     private JisightUnityComponent_LAM _lookAtMe = null;
     private GameMessageDataHandle _gameDataHandle = null;
@@ -90,7 +90,7 @@ public class NetWorkController : MonoBehaviour
     {
         //_uiAnimation.readyTime.readyTimeDoneEvent -= _GameStarusIsSundGlass;
         Debug.LogWarning("-------------- _GameStarusIsSundGlass -------------- ");
-        creatCode.GameQrCodePosOnGame();//二维码游戏中位置
+       creatCode.GameQrCodePosOnGame();//二维码游戏中位置
 
         _lookAtMe.PushGameStatus("2", true, true);
     }

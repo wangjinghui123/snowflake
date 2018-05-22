@@ -11,7 +11,7 @@ public class QrCodeConfig : MonoBehaviour
 
     void OnEnable()
     {
-        GetConfigStart();
+      //  GetConfigStart();
     }
     void OnDisable()
     {
@@ -57,6 +57,8 @@ public class QrCodeConfig : MonoBehaviour
 
     public void GetConfigOnGame()
     {
+
+
 
         Vector2 size = Vector2.zero;
         size.x = config.GetInt("Qr_Width_int_game");
