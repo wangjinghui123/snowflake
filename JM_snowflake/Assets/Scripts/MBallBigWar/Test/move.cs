@@ -53,4 +53,9 @@ public class move : MonoBehaviour
             transform.GetComponent<Rigidbody2D>().velocity = direction * playerMoveSpeed;
         }
     }
+
+    public void Update()
+    {
+        PlayerMove();
+    }
 }

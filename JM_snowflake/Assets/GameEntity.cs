@@ -105,22 +105,23 @@ public class GameEntity : MonoBehaviour
     public void UpdatePlayerMovePos(Vector3  dir)
     {
         // this.GetComponent<move>().PlayerMove();
-        dir.Normalize();
-        if (dir !=Vector3 .zero )
-        {
-            rigidbody2D.velocity = dir * _speed;
-        }
+        //dir.Normalize();
+        //if (dir !=Vector3 .zero )
+        //{
+        //    rigidbody2D.velocity = dir * _speed;
+        //}
        
     }
 
 
     private void Update()
     {
-        if (isOnDrag )
-        {
+        //if (isOnDrag )
+        //{
             
-          //  UpdatePlayerMovePos();
-        }
+        //   UpdatePlayerMovePos();
+        //}
+       
        
     }
   
