@@ -8,18 +8,23 @@ public class GameEntity : MonoBehaviour
 
     public bool isPlayer = false;
     public bool isAvatar = false;
+    public bool isOnDrag = false;
 
     private bool _isTouchBorder = false;//玩家是否触碰边界
 
     private Vector2 _position = Vector2.zero;
     private Vector2 _eulerAngles = Vector2.zero;
-    private float _speed = 0f;
+    private float _speed = 50f;
     private Vector2 _scale = Vector2.zero;
 
     public string entity_name = "";
     private static GameObject directionObj = null;
     private static GameObject directionObj_sprite = null;
 
+
+    public ScrollCircle scrollCircle;
+
+    private Rigidbody2D rigidbody2D;
     public Vector2 position
     {
         get
@@ -50,6 +55,11 @@ public class GameEntity : MonoBehaviour
                 directionObj.transform.eulerAngles = _eulerAngles;
             }
         }
+    }
+
+    private void Start()
+    {
+        rigidbody2D = this.GetComponent<Rigidbody2D >();
     }
     public Quaternion rotation
     {
@@ -92,27 +102,26 @@ public class GameEntity : MonoBehaviour
     }
 
 
-    public void UpdatePosition()
+    public void UpdatePlayerMovePos(Vector3  dir)
     {
-        this.GetComponent<move>().PlayerMove();
-        if (!_isTouchBorder)
+        // this.GetComponent<move>().PlayerMove();
+        dir.Normalize();
+        if (dir !=Vector3 .zero )
         {
-
+            rigidbody2D.velocity = dir * _speed;
         }
-
+       
     }
 
 
     private void Update()
     {
-        UpdatePosition();
+        if (isOnDrag )
+        {
+            
+          //  UpdatePlayerMovePos();
+        }
+       
     }
-    public bool TestPos()
-    {
-        //if (transform .position.x)
-        //{
-         
-        //}
-        return _isTouchBorder;
-    }
+  
 }

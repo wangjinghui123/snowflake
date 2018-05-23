@@ -22,7 +22,13 @@ public class ScrollCircle : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         get { return vertical; }
     }
-
+    public Vector3 Dir
+    {
+        set 
+        {
+           
+        }
+    }
 
     // Use this for initialization  
     void Start()
