@@ -9,7 +9,7 @@ using UnityEngine.Video;
 
 public class SceneController : MonoBehaviour
 {
-    public const bool UNITYE_DEBUG = false    ;
+    public const bool UNITYE_DEBUG = true    ;
     public const bool NET_WORK_DEBUG = false  ;
     [SerializeField]
     private GameObject _movie;
@@ -32,7 +32,8 @@ public class SceneController : MonoBehaviour
         Application.runInBackground = true;
         UnityEngine.Debug.unityLogger.logEnabled = UNITYE_DEBUG;
         UnityEngine.Debug.unityLogger.filterLogType = LogType.Warning | LogType.Error | LogType.Log;
-        Cursor.visible = false;
+
+       // Cursor.visible = true ;
         _isMovie = videotool.Ready();
         InitializedTheGame();
     }
