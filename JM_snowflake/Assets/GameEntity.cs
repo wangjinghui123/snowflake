@@ -109,10 +109,10 @@ public class GameEntity : MonoBehaviour
     }
     public bool TestPos()
     {
-        if (transform .position.x)
-        {
-
-        }
+        //if (transform .position.x)
+        //{
+         
+        //}
         return _isTouchBorder;
     }
 }

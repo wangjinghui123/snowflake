@@ -53,7 +53,7 @@ public class move : MonoBehaviour
         float hor = touch.Horizontal;
         float ver = touch.Vertical;
 
-        Vector3 direction = new Vector3(-hor, ver, 0);
+        Vector3 direction = new Vector3(hor, ver, 0);
         direction.Normalize();
         float tarangle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         // Vector3 direction = new Vector3(hor  , hor , 0);
@@ -61,8 +61,8 @@ public class move : MonoBehaviour
         {
             // transform.rotation = Quaternion.Slerp(transform .rotation ,Quaternion .Euler (0,0,tarangle+180 ),playerRotationSpeed *Time .deltaTime );
             //   transform.Translate(Vector3.left  * Time.deltaTime * playerMoveSpeed);
-            transform.Translate(direction * Time.deltaTime * playerMoveSpeed);
-            
+            //  transform.Translate(direction * Time.deltaTime * playerMoveSpeed);
+            transform.GetComponent<Rigidbody2D>().velocity = direction * playerMoveSpeed;
 
 
         }
