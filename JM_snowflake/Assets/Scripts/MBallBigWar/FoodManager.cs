@@ -6,20 +6,33 @@ using UnityEngine.UI;
 public class FoodManager : MonoBehaviour
 {
 
+
     public Color[] colors;
     public Sprite[] foodSprites;
-    private List<GameObject> foodObjList = new List<GameObject>();
-    public int maxFoodNumber = 100;
+    public  List<GameObject> foodObjList = new List<GameObject>();
+    private  int _maxFoodMass = 100;
 
     private RectTransform foodManagerRect;
     public RectTransform LeftUpPoint;
     public RectTransform RightDownPoint;
     public GameObject starFoodPrefab;
 
+    public int maxFoodMass
+    {
+        get
+        {
+            return _maxFoodMass;
+        }
+        set
+        {
+            _maxFoodMass = value;
+        }
+    }
+
     private void Start()
     {
         foodManagerRect = this.GetComponent<RectTransform>();
-        for (int i = 0; i < maxFoodNumber; i++)
+        for (int i = 0; i < _maxFoodMass; i++)
         {
             foodObjList.Add(SpawnFood());
 
@@ -30,7 +43,7 @@ public class FoodManager : MonoBehaviour
 
     public GameObject SpawnFood()
     {
-        if (foodObjList.Count <= maxFoodNumber )
+        if (foodObjList.Count <= _maxFoodMass)
         {
             float x = Random.Range(LeftUpPoint.position.x, RightDownPoint.position.x);
             float y = Random.Range(LeftUpPoint.position.y, RightDownPoint.position.y);

@@ -15,11 +15,11 @@ public class BallProperty : MonoBehaviour
     private Vector2 _position = Vector2.zero;
     private Vector2 _eulerAngles = Vector2.zero;
     private float _speed = 50f;
-    private Vector2 _scale = Vector2.zero;
+    private Vector3 _scale = new Vector3(2,2,2);
+    private float _playerMass = 0;
+    private RectTransform ballRectTransform;
 
-    public string entity_name = "";
-    private static GameObject directionObj = null;
-    private static GameObject directionObj_sprite = null;
+   
 
 
     public ScrollCircle scrollCircle;
@@ -41,37 +41,24 @@ public class BallProperty : MonoBehaviour
         }
     }
 
-    public Vector2 eulerAngles
+  
+    public float playerMass
     {
         get
         {
-            return _eulerAngles;
+            return _playerMass;
         }
         set
         {
-            _eulerAngles = value;
-            if (directionObj != null)
-            {
-                directionObj.transform.eulerAngles = _eulerAngles;
-            }
+            _playerMass = value;
         }
     }
-
     private void Start()
     {
         rigidbody2D = this.GetComponent<Rigidbody2D >();
+        ballRectTransform = this.GetComponent<RectTransform >();
     }
-    public Quaternion rotation
-    {
-        get
-        {
-            return Quaternion.Euler(_eulerAngles);
-        }
-        set
-        {
-            eulerAngles = value.eulerAngles;
-        }
-    }
+  
     public Vector2 scale
     {
         get
@@ -83,7 +70,8 @@ public class BallProperty : MonoBehaviour
             _scale = value;
             if (gameObject != null)
             {
-                gameObject.transform.localScale = _scale;
+             //   gameObject.transform.localScale = _scale;
+                ballRectTransform.localScale = _scale;
             }
         }
     }
@@ -126,8 +114,42 @@ public class BallProperty : MonoBehaviour
     /// <summary>
     /// 球球吞食食物
     /// </summary>
-    public void BallDevourFood()
+    /// <param name="mass"></param>
+    /// <param name="addScaleValue"></param>
+    public void BallDevourFood(int mass,float addScaleValue)
     {
+        _playerMass += mass;
+
+        ////addScaleValue = Mathf.Log(2,_scale.x   );
+        //if (_scale.x <= 2)
+        //{
+        //    _scale += new Vector3(addScaleValue, addScaleValue, addScaleValue);
+        //    //_scale = new Vector3(addScaleValue ,addScaleValue,addScaleValue ); 
+        //    ballRectTransform.localScale = _scale;
+        //}
+        //else
+        //{
+
+        //    addScaleValue = Mathf.Log(_scale .x,2 );
+        //    _scale = new Vector3(addScaleValue ,addScaleValue ,addScaleValue );
+        //    ballRectTransform.localScale = _scale;
+        //}
+
+
+        if (_scale.x < 2)
+        {
+            _scale += new Vector3(addScaleValue, addScaleValue, addScaleValue);
+            ballRectTransform.localScale = _scale;
+        }
+        else
+        {
+            addScaleValue = Mathf.Log(_scale.x, 2);
+            _scale = new Vector3(addScaleValue, addScaleValue, addScaleValue);
+            ballRectTransform.localScale = _scale;
+        }
+       
+
+
 
     }
 
@@ -140,7 +162,7 @@ public class BallProperty : MonoBehaviour
 
     }
 
-
+  
 
    
 

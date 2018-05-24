@@ -9,6 +9,8 @@ TagManager:
   - HeadPortriat
   - Map
   - GameArea
+  - StarFood
+  - ThornBall
   layers:
   - Default
   - TransparentFX
