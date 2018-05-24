@@ -1,0 +1,31 @@
+'''MessageType header'''
+
+msgType = {
+    'Login':1,
+    'Login_Result':2,
+    'Register':3,
+    'Register_Result':4,
+    'Account_Info':5,
+    'Account_Info_Result':6,
+    'Player_Info':7,
+    'Player_Info_Result':8,
+    'StartSingleGame':9,
+    'StartSingleGame_Result':10,
+    'StartTeamGame':11,
+    'StartSurvivalGame':12,
+    'ChatSend':13,
+    'ChatReceive':14,
+    'Move':15,
+    'UpdatePosition':16,
+    'Divide':17,
+    'SpitSpore':18,
+    'SpitSporeResult':19,
+    'EatSpore':20,
+    'AddPrick':21,
+    'EatPrick':22,
+    'EatBean':23,
+    'UpdateSpore':24,
+    'EnterPlayer':25,
+    'PlayerConcentrate':26,
+    'UpdateTime':27
+    }

@@ -1,0 +1,1 @@
+电脑须安装Python2.7，运行服务器代码下的gameServer.py文件。客户端使用vs2013运行，在客户端代码中，要修改WebSocketMananger.cpp的init函数，改为自己电脑的ip地址。用mysql图形界面工具执行battle_of_balls.sql文件

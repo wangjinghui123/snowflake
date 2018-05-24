@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类">
+      <UniqueIdentifier>{8d5987c7-7081-4803-9f35-7a113445d45a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\全局变量">
+      <UniqueIdentifier>{2e976a48-4efb-4671-aad4-70064b26eb7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景">
+      <UniqueIdentifier>{19b1133c-0167-4c67-942b-d6dbc7973563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\实体">
+      <UniqueIdentifier>{b6129acd-e078-40d4-a99e-0f3ab1b7c7c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具">
+      <UniqueIdentifier>{3714fc76-a815-4fab-b2b4-9e61aa4c82e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\游戏进入场景">
+      <UniqueIdentifier>{46aea95c-4c47-48ab-886a-7e18dac3a23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景">
+      <UniqueIdentifier>{6a1c4c12-3f11-449f-9000-d76fe35bc429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\游戏场景">
+      <UniqueIdentifier>{bada81fd-ebdd-41cd-85e6-16d65c0d98d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\玩家信息场景">
+      <UniqueIdentifier>{894a13b7-8bd9-4e83-a673-00cdad39666f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\故事背景场景">
+      <UniqueIdentifier>{c3e7a9d4-02ad-47ee-821b-c0702190617e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\关系场景">
+      <UniqueIdentifier>{4e777ac0-27a8-4107-86b5-1f1b39c607f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\战队场景">
+      <UniqueIdentifier>{1f6e537b-7e32-4ea7-b8cd-41ca5fd20334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\菜单层">
+      <UniqueIdentifier>{b53b2600-908d-438a-8387-cb559337d48c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\聊天层">
+      <UniqueIdentifier>{12819dd5-9a73-49cc-a15e-69961e010e7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\签到层">
+      <UniqueIdentifier>{8d1ec513-4bef-44fa-9af3-d7178ba0abec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\设置层">
+      <UniqueIdentifier>{44a444d3-26a4-40ea-840f-864ceb6eaff1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\获取棒棒糖层">
+      <UniqueIdentifier>{45359602-c58e-42a1-a8d1-94c306ea03c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\团战模式层">
+      <UniqueIdentifier>{37eaa212-5c22-402c-a603-b256eff49904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\生存模式层">
+      <UniqueIdentifier>{b05b80b6-a5c2-4a02-b5b8-56325d894c2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\自定义房间层">
+      <UniqueIdentifier>{175fd21c-8ad9-49c8-b072-da0ec0ceb52e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\添加朋友层">
+      <UniqueIdentifier>{2932dd47-9309-40c8-961f-0d1ceb7dd2fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\游戏场景\数据层">
+      <UniqueIdentifier>{d09e313e-7e05-4aa5-9f07-ac271f2c18bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\玩家信息场景\首页层">
+      <UniqueIdentifier>{2e3e737e-b3c5-4405-88be-b418211417cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\玩家信息场景\照片层">
+      <UniqueIdentifier>{7ff9bbf2-0032-4eb8-8464-bc58f4ff6c1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\玩家信息场景\游戏层">
+      <UniqueIdentifier>{d76e1df7-adf5-4fea-9909-63914ae7a0b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\玩家信息场景\皮肤层">
+      <UniqueIdentifier>{3c3457ba-8b87-4b9c-b447-16f21b0ee771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\玩家信息场景\留言层">
+      <UniqueIdentifier>{ec4a852d-6e37-445b-ba66-4c534455aac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\战队场景\首页层">
+      <UniqueIdentifier>{c3ff9fe3-481f-49d2-95a4-775a35193b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\战队场景\成员层">
+      <UniqueIdentifier>{04c4f451-3fc4-4da7-960f-d416210484b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\战队场景\荣誉层">
+      <UniqueIdentifier>{ecaa6968-a8c4-4fd6-87bf-b6c06701cc34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\战队场景\事件层">
+      <UniqueIdentifier>{6a945eb6-45b4-420b-a45d-68d20ccf32d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\战队场景\留言层">
+      <UniqueIdentifier>{c39c93c3-bbc0-440f-875b-b82cdf0bcf35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\关系场景\关注层">
+      <UniqueIdentifier>{c7691339-64e7-4706-beb2-87debe82b545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\关系场景\粉丝层">
+      <UniqueIdentifier>{d3161dd2-d335-40e5-8bf1-adf81e2ab9c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\关系场景\对手层">
+      <UniqueIdentifier>{8d8eb0bf-1b65-4407-99a2-38f4932b69e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\观战场景">
+      <UniqueIdentifier>{4e671441-3292-482a-a1d0-20afb005049f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\排行榜场景">
+      <UniqueIdentifier>{39ce041f-4a3c-4c36-b716-596f3b6ed92c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\商店场景">
+      <UniqueIdentifier>{88375eae-44f4-4b08-adef-2a522cd96a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\游戏结束场景">
+      <UniqueIdentifier>{a2f169ec-d4e3-41ef-a37c-ee66756dc60a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\通知层">
+      <UniqueIdentifier>{75d66b06-3497-46a8-af21-52d74576b357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\商店场景\宝箱层">
+      <UniqueIdentifier>{3bfb9db9-4288-4b54-aa91-493849b5b09f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\商店场景\皮肤层">
+      <UniqueIdentifier>{b34f581d-76eb-41a8-9662-016a949df61c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\商店场景\圣衣层">
+      <UniqueIdentifier>{34575732-3ecd-4468-8316-bf7ad0ddaabc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\商店场景\会员层">
+      <UniqueIdentifier>{0d0e26c2-1e5b-4660-b3f3-2842aa519324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\设置层\账号设置">
+      <UniqueIdentifier>{e2fbb676-65a3-455b-ac8b-2a412ec01096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\设置层\游戏设置">
+      <UniqueIdentifier>{a15cb047-98e4-4425-9a40-3a5a9ba9edb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\菜单场景\设置层\信誉值">
+      <UniqueIdentifier>{83b81ca6-4eea-4390-8829-b3216d61800b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具\遮罩层">
+      <UniqueIdentifier>{71a4eeef-b3e8-4aeb-b188-90a3cbe9754b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具\自定义菜单">
+      <UniqueIdentifier>{2b31b3e0-39f7-4340-bef4-d00bd5a0c12a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\实体\基类">
+      <UniqueIdentifier>{30f9983a-66e2-4ef7-9464-661d9a70d5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\实体\孢子">
+      <UniqueIdentifier>{85c86f41-b4de-42dc-bfda-5cc6ce950c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\实体\豆子">
+      <UniqueIdentifier>{0d9fb809-c30b-4b07-aa5d-ad640758ffd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\实体\尖刺">
+      <UniqueIdentifier>{d1a8fe57-285b-4dfb-9b24-37ba6aeae94f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\实体\玩家">
+      <UniqueIdentifier>{6e115132-cb0a-4dd4-9c44-696de79a8002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\实体\分身">
+      <UniqueIdentifier>{b95ae3b7-3ef9-4f3c-a39b-90ba2ad70b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\场景\游戏场景\游戏层">
+      <UniqueIdentifier>{acfc8558-6e52-4dd3-82ee-90f067f052c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具\摇杆">
+      <UniqueIdentifier>{af3192af-8996-4d5e-bad8-685b60095a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具\下拉列表">
+      <UniqueIdentifier>{d628512d-9ee7-4f86-b707-89de59a62cc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具\提示框">
+      <UniqueIdentifier>{cb25cf31-9a79-463f-a9d3-61d263988791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具\csv文件读取">
+      <UniqueIdentifier>{accc15f3-a1e5-452e-b38f-6688e5253bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="分类\工具\网络通信">
+      <UniqueIdentifier>{d86e21a4-a206-4350-97b8-c14d8aa5c53f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\EnterScene\EnterScene.cpp">
+      <Filter>分类\场景\游戏进入场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\SceneManager.cpp">
+      <Filter>分类\场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\MenuScene.cpp">
+      <Filter>分类\场景\菜单场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\GameScene\GameScene.cpp">
+      <Filter>分类\场景\游戏场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\RelationScene\RelationScene.cpp">
+      <Filter>分类\场景\关系场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\PlayerScene\PlayerScene.cpp">
+      <Filter>分类\场景\玩家信息场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\TeamScene\TeamScene.cpp">
+      <Filter>分类\场景\战队场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\WatchGameScene\WatchGameScene.cpp">
+      <Filter>分类\场景\观战场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\RankScene\RankScene.cpp">
+      <Filter>分类\场景\排行榜场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\StoryScene\StoryScene.cpp">
+      <Filter>分类\场景\故事背景场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\StoreScene\StoreScene.cpp">
+      <Filter>分类\场景\商店场景</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\MenuLayer.cpp">
+      <Filter>分类\场景\菜单场景\菜单层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\GetLollyLayer.cpp">
+      <Filter>分类\场景\菜单场景\获取棒棒糖层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\ChatLayer.cpp">
+      <Filter>分类\场景\菜单场景\聊天层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\SignLayer.cpp">
+      <Filter>分类\场景\菜单场景\签到层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\SettingLayer.cpp">
+      <Filter>分类\场景\菜单场景\设置层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\FindFriendLayer.cpp">
+      <Filter>分类\场景\菜单场景\添加朋友层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\TeamModeLayer.cpp">
+      <Filter>分类\场景\菜单场景\团战模式层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\CustomModeLayer.cpp">
+      <Filter>分类\场景\菜单场景\自定义房间层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\SurvivalModeLayer.cpp">
+      <Filter>分类\场景\菜单场景\生存模式层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\AccountSettingLayer.cpp">
+      <Filter>分类\场景\菜单场景\设置层\账号设置</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\GameSettingLayer.cpp">
+      <Filter>分类\场景\菜单场景\设置层\游戏设置</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tools\MaskLayer\MaskLayer.cpp">
+      <Filter>分类\工具\遮罩层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\StoreScene\TreasureLayer.cpp">
+      <Filter>分类\场景\商店场景\宝箱层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\StoreScene\MemberLayer.cpp">
+      <Filter>分类\场景\商店场景\会员层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\StoreScene\SkinLayer.cpp">
+      <Filter>分类\场景\商店场景\皮肤层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\StoreScene\VestmentLayer.cpp">
+      <Filter>分类\场景\商店场景\圣衣层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tools\MyMenu\MyMenu.cpp">
+      <Filter>分类\工具\自定义菜单</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\RelationScene\FocusLayer.cpp">
+      <Filter>分类\场景\关系场景\关注层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\RelationScene\FansLayer.cpp">
+      <Filter>分类\场景\关系场景\粉丝层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\RelationScene\RivalLayer.cpp">
+      <Filter>分类\场景\关系场景\对手层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\PlayerScene\HomeLayer.cpp">
+      <Filter>分类\场景\玩家信息场景\首页层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\PlayerScene\MessageLayer.cpp">
+      <Filter>分类\场景\玩家信息场景\留言层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\PlayerScene\PlayerDataLayer.cpp">
+      <Filter>分类\场景\玩家信息场景\游戏层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\PlayerScene\PictureLayer.cpp">
+      <Filter>分类\场景\玩家信息场景\照片层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\PlayerScene\PlayerSkinLayer.cpp">
+      <Filter>分类\场景\玩家信息场景\皮肤层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity\Entity.cpp">
+      <Filter>分类\实体\基类</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity\Spore.cpp">
+      <Filter>分类\实体\孢子</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity\Bean.cpp">
+      <Filter>分类\实体\豆子</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity\Prick.cpp">
+      <Filter>分类\实体\尖刺</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity\Player.cpp">
+      <Filter>分类\实体\玩家</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity\PlayerDivision.cpp">
+      <Filter>分类\实体\分身</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\GameScene\DataLayer.cpp">
+      <Filter>分类\场景\游戏场景\数据层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\GameScene\GameLayer.cpp">
+      <Filter>分类\场景\游戏场景\游戏层</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tools\Joystick\Joystick.cpp">
+      <Filter>分类\工具\摇杆</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tools\DropDownList\DropDownList.cpp">
+      <Filter>分类\工具\下拉列表</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tools\PromptBox\PromptBox.cpp">
+      <Filter>分类\工具\提示框</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tools\CsvUtils\CsvUtils.cpp">
+      <Filter>分类\工具\csv文件读取</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\MenuScene\LoginLayer.cpp">
+      <Filter>分类\场景\菜单场景\设置层\账号设置</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tools\WebSocketManager\WebSocketManager.cpp">
+      <Filter>分类\工具\网络通信</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\EnterScene\EnterScene.h">
+      <Filter>分类\场景\游戏进入场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\SceneManager.h">
+      <Filter>分类\场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\MenuScene.h">
+      <Filter>分类\场景\菜单场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\GameScene\GameScene.h">
+      <Filter>分类\场景\游戏场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\RelationScene\RelationScene.h">
+      <Filter>分类\场景\关系场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\PlayerScene\PlayerScene.h">
+      <Filter>分类\场景\玩家信息场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\TeamScene\TeamScene.h">
+      <Filter>分类\场景\战队场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\WatchGameScene\WatchGameScene.h">
+      <Filter>分类\场景\观战场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\RankScene\RankScene.h">
+      <Filter>分类\场景\排行榜场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\StoryScene\StoryScene.h">
+      <Filter>分类\场景\故事背景场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\StoreScene\StoreScene.h">
+      <Filter>分类\场景\商店场景</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\MenuLayer.h">
+      <Filter>分类\场景\菜单场景\菜单层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\GetLollyLayer.h">
+      <Filter>分类\场景\菜单场景\获取棒棒糖层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\ChatLayer.h">
+      <Filter>分类\场景\菜单场景\聊天层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\SignLayer.h">
+      <Filter>分类\场景\菜单场景\签到层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\SettingLayer.h">
+      <Filter>分类\场景\菜单场景\设置层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\FindFriendLayer.h">
+      <Filter>分类\场景\菜单场景\添加朋友层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\TeamModeLayer.h">
+      <Filter>分类\场景\菜单场景\团战模式层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\CustomModeLayer.h">
+      <Filter>分类\场景\菜单场景\自定义房间层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\SurvivalModeLayer.h">
+      <Filter>分类\场景\菜单场景\生存模式层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\AccountSettingLayer.h">
+      <Filter>分类\场景\菜单场景\设置层\账号设置</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\GameSettingLayer.h">
+      <Filter>分类\场景\菜单场景\设置层\游戏设置</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tools\MaskLayer\MaskLayer.h">
+      <Filter>分类\工具\遮罩层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\StoreScene\TreasureLayer.h">
+      <Filter>分类\场景\商店场景\宝箱层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\StoreScene\MemberLayer.h">
+      <Filter>分类\场景\商店场景\会员层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\StoreScene\SkinLayer.h">
+      <Filter>分类\场景\商店场景\皮肤层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\StoreScene\VestmentLayer.h">
+      <Filter>分类\场景\商店场景\圣衣层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tools\MyMenu\MyMenu.h">
+      <Filter>分类\工具\自定义菜单</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\RelationScene\FocusLayer.h">
+      <Filter>分类\场景\关系场景\关注层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\RelationScene\FansLayer.h">
+      <Filter>分类\场景\关系场景\粉丝层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\RelationScene\RivalLayer.h">
+      <Filter>分类\场景\关系场景\对手层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\PlayerScene\HomeLayer.h">
+      <Filter>分类\场景\玩家信息场景\首页层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\PlayerScene\MessageLayer.h">
+      <Filter>分类\场景\玩家信息场景\留言层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\PlayerScene\PlayerDataLayer.h">
+      <Filter>分类\场景\玩家信息场景\游戏层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\PlayerScene\PictureLayer.h">
+      <Filter>分类\场景\玩家信息场景\照片层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\PlayerScene\PlayerSkinLayer.h">
+      <Filter>分类\场景\玩家信息场景\皮肤层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity\Entity.h">
+      <Filter>分类\实体\基类</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity\Spore.h">
+      <Filter>分类\实体\孢子</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity\Bean.h">
+      <Filter>分类\实体\豆子</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity\Prick.h">
+      <Filter>分类\实体\尖刺</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity\Player.h">
+      <Filter>分类\实体\玩家</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity\PlayerDivision.h">
+      <Filter>分类\实体\分身</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Header\AppMacros.h">
+      <Filter>分类\全局变量</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\GameScene\DataLayer.h">
+      <Filter>分类\场景\游戏场景\数据层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\GameScene\GameLayer.h">
+      <Filter>分类\场景\游戏场景\游戏层</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tools\Joystick\Joystick.h">
+      <Filter>分类\工具\摇杆</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tools\DropDownList\DropDownList.h">
+      <Filter>分类\工具\下拉列表</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tools\PromptBox\PromptBox.h">
+      <Filter>分类\工具\提示框</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tools\CsvUtils\CsvUtils.h">
+      <Filter>分类\工具\csv文件读取</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\MenuScene\LoginLayer.h">
+      <Filter>分类\场景\菜单场景\设置层\账号设置</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tools\WebSocketManager\WebSocketManager.h">
+      <Filter>分类\工具\网络通信</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Header\MessageType.h">
+      <Filter>分类\全局变量</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Header\Common.h">
+      <Filter>分类\全局变量</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Header\GameModeType.h">
+      <Filter>分类\全局变量</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
