@@ -85,7 +85,7 @@ public class NetWorkController : MonoBehaviour
     public void GameStarusIsReady()
     {
         Debug.LogWarning(" --------------_GameStarusIsReady -------------- ");
-        _lookAtMe.PushGameStatus("1", true, true);
+        _lookAtMe.PushGameStatus("1", true, true);//游戏准备
     }
     public void GameStarusIsSundGlass()
     {
@@ -93,22 +93,22 @@ public class NetWorkController : MonoBehaviour
         Debug.LogWarning("-------------- _GameStarusIsSundGlass -------------- ");
        creatCode.GameQrCodePosOnGame();//二维码游戏中位置
 
-        _lookAtMe.PushGameStatus("2", true, true);
+        _lookAtMe.PushGameStatus("2", true, true);//开始倒计时
     }
     public void GameStarusIsGame()
     {
         Debug.LogWarning(" -------------- _GameStarusIsGame -------------- ");
-        _lookAtMe.PushGameStatus("3", true, true);
+        _lookAtMe.PushGameStatus("3", true, true);//倒计时结束
     }
     public void GameStatusIsWm()
     {
         Debug.LogWarning(" -------------- _GameStarusIsWm -------------- ");
-        _lookAtMe.PushGameStatus("5", true, true);
+        _lookAtMe.PushGameStatus("5", true, true);//游戏结束
     }
     public void GameStarusIsWmII()
     {
         Debug.LogWarning(" -------------- _GameStarusIsWmII --------------");
-        _lookAtMe.PushGameStatus("6", true, true);
+        _lookAtMe.PushGameStatus("6", true, true);//断开长连接
         StopNetWork();
     }
     //用户尝试登陆的回复

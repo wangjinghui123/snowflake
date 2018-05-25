@@ -13,7 +13,7 @@ public class ThornManager : MonoBehaviour {
 
     private void Start()
     {
-        maxThornBallCount = Random.Range(2,5);
+        maxThornBallCount = Random.Range(2,6);
         for (int i=0;i<maxThornBallCount;i++)
         {
             SpawnThornBall();
@@ -30,6 +30,8 @@ public class ThornManager : MonoBehaviour {
         obj.transform.position = thornVector3;
         Image image = obj.GetComponent<Image>();
         image.sprite = thornSprites[Random.Range(0, thornSprites.Length)];
+        float randomScale = Random.Range(0.4f,2f);
+        obj.GetComponent<RectTransform>().localScale = new Vector3(randomScale ,randomScale ,randomScale );
     }
 
 
