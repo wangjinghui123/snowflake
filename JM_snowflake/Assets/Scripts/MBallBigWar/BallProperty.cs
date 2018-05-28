@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BallProperty : MonoBehaviour
 {
+    public float cellSplitSpeed = 40f;
 
     private Vector2 _position = Vector2.zero;
     private Vector2 _eulerAngles = Vector2.zero;
@@ -13,11 +14,12 @@ public class BallProperty : MonoBehaviour
     private float _playerMass = 0;
     private RectTransform ballRectTransform;//玩家自身坐标
     private float addMassValue = 2.0f;
-    private int ballSpriteIndex;
    
-
-    private PlayersManager playerManager;
+    private Vector3 direction;//移动方向
+  
+   
     private Rigidbody2D rigidbody2D;
+    
     public Vector2 position
     {
         get
@@ -59,7 +61,7 @@ public class BallProperty : MonoBehaviour
             if (gameObject != null)
             {
                 //   gameObject.transform.localScale = _scale;
-                ballRectTransform.localScale = _scale;
+                _scale = ballRectTransform.localScale;
             }
         }
     }
@@ -78,12 +80,14 @@ public class BallProperty : MonoBehaviour
 
     private void Start()
     {
-
+      
+        direction = GetComponent<move>().dir;
         rigidbody2D = this.GetComponent<Rigidbody2D>();
         ballRectTransform = this.GetComponent<RectTransform>();
-        playerManager = this.transform.parent.GetComponent<PlayersManager>();
-        InitBall();
-       
+        gameObject.GetComponent<Image>().sprite = transform.parent.GetComponent<Cells>().cellSprite;
+        _scale = ballRectTransform.localScale;
+
+
     }
 
     private void Update()
@@ -102,12 +106,7 @@ public class BallProperty : MonoBehaviour
     }
 
 
-    public void InitBall()
-    {
-        ballSpriteIndex = Random.Range(0, playerManager.ballSprites.Length);
-        this.GetComponent<Image>().sprite = playerManager.ballSprites[ballSpriteIndex];
-
-    }
+   
 
     /// <summary>
     /// 球球移动
@@ -134,8 +133,13 @@ public class BallProperty : MonoBehaviour
             return;
         }
         // 分开  弹射 
-      
-       
+        GameObject otherCell = Instantiate(gameObject ,transform .parent );
+        otherCell.GetComponent<Rigidbody2D>().AddForce(direction* cellSplitSpeed);
+        _scale = _scale / 2;
+        ballRectTransform.localScale = _scale;
+        otherCell.transform.localScale = ballRectTransform.localScale;
+        _playerMass /= 2;
+        addMassValue /= 2;
         //靠近
 
         //紧靠

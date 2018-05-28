@@ -10,15 +10,16 @@ public class Thorn : MonoBehaviour {
         _thornScale = this.transform.localScale;
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerExit2D(Collider2D other)
     {
         if (other .tag =="Player")
         {
             if (_thornScale.x <other.transform .localScale.x  )
             {
                 //分身 体重增加 刺球消失 随机生成新的刺球
+                other.GetComponent<BallProperty>().BallSplit();
+                Destroy(gameObject );
 
-                
             }
         }
     }
