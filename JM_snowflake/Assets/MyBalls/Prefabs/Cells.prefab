@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cells: []
+  cellSprite: {fileID: 0}
 --- !u!114 &114474645018109366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touch: {fileID: 0}
+  dir: {x: 0, y: 0, z: 0}
 --- !u!114 &114561436121921648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a880139288f1eea46878bf0c36b8d1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cellSplitSpeed: 40
 --- !u!114 &114967125925644110
 MonoBehaviour:
   m_ObjectHideFlags: 1

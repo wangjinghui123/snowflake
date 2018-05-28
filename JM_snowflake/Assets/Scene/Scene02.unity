@@ -14812,7 +14812,7 @@ Prefab:
     - target: {fileID: 114561436121921648, guid: 84d5c298527e0df46a7cf95ef085d37c,
         type: 2}
       propertyPath: cellSplitSpeed
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84d5c298527e0df46a7cf95ef085d37c, type: 2}
@@ -15102,6 +15102,8 @@ MonoBehaviour:
   maxThornBallCount: 5
   thornBallPrefab: {fileID: 1545062610740010, guid: cf7b8ae93e743b7459092a9595fd5776,
     type: 2}
+  thornsList: []
+  isSpawnThorn: 0
 --- !u!222 &1085012678
 CanvasRenderer:
   m_ObjectHideFlags: 0

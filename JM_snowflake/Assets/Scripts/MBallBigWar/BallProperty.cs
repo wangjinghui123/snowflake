@@ -19,6 +19,7 @@ public class BallProperty : MonoBehaviour
   
    
     private Rigidbody2D rigidbody2D;
+    private RectTransform  playerManager;
     
     public Vector2 position
     {
@@ -86,7 +87,8 @@ public class BallProperty : MonoBehaviour
         ballRectTransform = this.GetComponent<RectTransform>();
         gameObject.GetComponent<Image>().sprite = transform.parent.GetComponent<Cells>().cellSprite;
         _scale = ballRectTransform.localScale;
-
+        playerManager = transform.parent.parent.GetComponent<RectTransform >();
+       
 
     }
 
@@ -134,10 +136,11 @@ public class BallProperty : MonoBehaviour
         }
         // 分开  弹射 
         GameObject otherCell = Instantiate(gameObject ,transform .parent );
-        otherCell.GetComponent<Rigidbody2D>().AddForce(direction* cellSplitSpeed);
+      
         _scale = _scale / 2;
         ballRectTransform.localScale = _scale;
         otherCell.transform.localScale = ballRectTransform.localScale;
+        otherCell.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction.x, direction.y ) * cellSplitSpeed);
         _playerMass /= 2;
         addMassValue /= 2;
         //靠近

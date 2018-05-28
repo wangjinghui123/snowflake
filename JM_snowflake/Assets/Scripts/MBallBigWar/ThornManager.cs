@@ -10,14 +10,19 @@ public class ThornManager : MonoBehaviour {
     public Sprite[] thornSprites;
     public int maxThornBallCount;
     public GameObject thornBallPrefab;
+    public List<GameObject> thornsList = null;
+    public bool isSpawnThorn = false;
+
 
     private void Start()
     {
-        maxThornBallCount = Random.Range(2,6);
+       
+           maxThornBallCount = Random.Range(2,6);
         for (int i=0;i<maxThornBallCount;i++)
         {
             SpawnThornBall();
         }
+        
     }
 
     public void SpawnThornBall()
@@ -32,8 +37,28 @@ public class ThornManager : MonoBehaviour {
         image.sprite = thornSprites[Random.Range(0, thornSprites.Length)];
         float randomScale = Random.Range(.5f,5f);
         obj.GetComponent<RectTransform>().localScale = new Vector3(randomScale ,randomScale ,randomScale );
+        thornsList.Add(obj );
+
+
     }
 
+    private void Update()
+    {
+        if (isSpawnThorn)
+        {
+            if (thornsList .Count <=3)
+            {
+                StartCoroutine(SpawnThorn ());
+                isSpawnThorn = false;
+            }
+        }
+    }
+    IEnumerator SpawnThorn()
+    {
+        float random = Random.Range(5,10);
+        yield return new  WaitForSeconds(random );
+        SpawnThornBall();
+        
 
-
+    }
 }

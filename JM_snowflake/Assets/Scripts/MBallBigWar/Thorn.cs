@@ -5,9 +5,11 @@ using UnityEngine;
 public class Thorn : MonoBehaviour {
     private float thornMass = 0;
     private Vector3 _thornScale;
+    private ThornManager thornManager;
     private void Start()
     {
         _thornScale = this.transform.localScale;
+        thornManager = transform.parent.GetComponent<ThornManager >();
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -18,6 +20,7 @@ public class Thorn : MonoBehaviour {
             {
                 //分身 体重增加 刺球消失 随机生成新的刺球
                 other.GetComponent<BallProperty>().BallSplit();
+                thornManager.isSpawnThorn = true;
                 Destroy(gameObject );
 
             }
