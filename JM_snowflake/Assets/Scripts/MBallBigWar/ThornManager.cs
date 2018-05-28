@@ -30,7 +30,7 @@ public class ThornManager : MonoBehaviour {
         obj.transform.position = thornVector3;
         Image image = obj.GetComponent<Image>();
         image.sprite = thornSprites[Random.Range(0, thornSprites.Length)];
-        float randomScale = Random.Range(0.4f,2f);
+        float randomScale = Random.Range(.5f,5f);
         obj.GetComponent<RectTransform>().localScale = new Vector3(randomScale ,randomScale ,randomScale );
     }
 

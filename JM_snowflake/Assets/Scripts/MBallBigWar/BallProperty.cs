@@ -5,19 +5,16 @@ using UnityEngine.UI;
 
 public class BallProperty : MonoBehaviour
 {
-    public float _maxSpeed = 50;
-    public float _minSpeed = 10;
-
 
     private Vector2 _position = Vector2.zero;
     private Vector2 _eulerAngles = Vector2.zero;
     private float _speed = 50f;
-    private Vector3 _scale = new Vector3(0.3f,0.3f,0.3f);
+    private Vector3 _scale = Vector3.one;
     private float _playerMass = 0;
     private RectTransform ballRectTransform;//玩家自身坐标
-    private float addMassValue = 2f;//
+    private float addMassValue = 2.0f;
     private int ballSpriteIndex;
-
+   
 
     private PlayersManager playerManager;
     private Rigidbody2D rigidbody2D;
@@ -49,7 +46,7 @@ public class BallProperty : MonoBehaviour
             _playerMass = value;
         }
     }
-   
+
     public Vector2 scale
     {
         get
@@ -81,26 +78,34 @@ public class BallProperty : MonoBehaviour
 
     private void Start()
     {
+
         rigidbody2D = this.GetComponent<Rigidbody2D>();
         ballRectTransform = this.GetComponent<RectTransform>();
         playerManager = this.transform.parent.GetComponent<PlayersManager>();
         InitBall();
+       
     }
 
     private void Update()
     {
-        if (Input .GetKey (KeyCode .Q ))
+        if (Input.GetKey(KeyCode.Q))
         {
+            //吐球 
             BallSplitOutBall();
         }
-       
+        if (Input .GetKeyDown (KeyCode .W ))
+        {
+            //分身
+            BallSplit();
+        }
+
     }
-    
+
 
     public void InitBall()
     {
-        ballSpriteIndex = Random.Range(0,playerManager.ballSprites .Length );
-        this.GetComponent<Image>().sprite = playerManager.ballSprites[ballSpriteIndex ];
+        ballSpriteIndex = Random.Range(0, playerManager.ballSprites.Length);
+        this.GetComponent<Image>().sprite = playerManager.ballSprites[ballSpriteIndex];
 
     }
 
@@ -113,7 +118,8 @@ public class BallProperty : MonoBehaviour
         dir.Normalize();
         if (dir != Vector3.zero)
         {
-            _speed = Mathf.Clamp((1 / ballRectTransform.localScale.x * 50), 5, 60);
+            //  _speed = Mathf.Clamp((1 / ballRectTransform.localScale.x * 50),10,100);
+            _speed = (1 / ballRectTransform.localScale.x * 200);
             rigidbody2D.velocity = dir * _speed;
         }
     }
@@ -123,7 +129,18 @@ public class BallProperty : MonoBehaviour
     /// </summary>
     public void BallSplit()
     {
+        if (_scale.x <2)
+        {
+            return;
+        }
+        // 分开  弹射 
+      
+       
+        //靠近
 
+        //紧靠
+
+        //合并
     }
 
     /// <summary>
@@ -132,13 +149,21 @@ public class BallProperty : MonoBehaviour
     /// <param name="增加质量值"></param>
     public void BallDevourFood(float mass)
     {
-
         _playerMass += mass;
-        float y = Mathf.Log(addMassValue, 8f);
+        float y = Mathf.Log(addMassValue, 3f);
         _scale = new Vector3(y, y, y);
-        ballRectTransform.localScale = _scale;
-        addMassValue++;
-      //  Debug.Log("=====================================" + _playerMass + "===============================");
+        if (_scale.x <= 1)
+        {
+            // ballRectTransform.localScale = _scale;
+            addMassValue++;
+        }
+        else
+        {
+            ballRectTransform.localScale = _scale;
+            addMassValue++;
+        }
+
+        //  Debug.Log("=====================================" + _playerMass + "===============================");
     }
 
     /// <summary>
@@ -146,6 +171,10 @@ public class BallProperty : MonoBehaviour
     /// </summary>
     public void BallSplitOutBall()
     {
+        if (_scale .x<2)
+        {
+            return;
+        }
         
     }
 }
