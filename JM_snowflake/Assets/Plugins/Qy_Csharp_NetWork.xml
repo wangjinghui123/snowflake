@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Qy_Csharp_NetWork</name>
+    </assembly>
+    <members>
+        <member name="E:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.JLAM_Event_Fir">
+            <summary>
+            消息事件
+            </summary>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.StartLAM(Qy_CSharp_NetWork.Component.NET_OPTION,System.Int32,System.String[])">
+            <summary>
+            发起链接
+            </summary>
+            <param name="netOption">内网、外网</param>
+            <param name="deveiceId">设备Id</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PushGameStatus(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            向游戏服务器推送游戏状态
+            </summary>
+            <param name="status">设置游戏服务器状态</param>
+            <param name="verify">是否需要服务器回执</param>
+            <param name="timeTag">是否携带时间戳</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PushMsgToOther(System.Object,System.String[],System.Boolean,System.Boolean)">
+            <summary>
+            向 H5 端发送信息
+            </summary>
+            <param name="msg">消息</param>
+            <param name="receivers">接收者的id ,如果填写["All"]则为群发</param>
+            <param name="verify">是否需要服务器回执</param>
+            <param name="timeTag">是否携带时间戳</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PushRankListToMaster(System.Collections.Generic.List{System.String},System.Boolean,System.Boolean)">
+            <summary>
+            向游戏服务器发送排行榜
+            </summary>
+            <param name="userIdList">玩家排行表</param>
+            <param name="verify">是否需要回执</param>
+            <param name="timeTag">是否携带时间戳</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PostAwardeList(System.Collections.Generic.Dictionary{System.String,System.Int32},System.Boolean)">
+            <summary>
+            请求多个奖励
+            </summary>
+            <param name="userId_count_Dic"></param>
+            <param name="timeTag"></param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PostAwardeList_leo(System.Collections.Generic.Dictionary{System.String,System.Int32},System.Boolean)">
+            <summary>
+            请求多个奖励
+            </summary>
+            <param name="userId_count_Dic"></param>
+            <param name="timeTag"></param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PostAwardeList(System.Collections.Generic.List{System.Int32},System.Boolean)">
+            <summary>
+            请求单个奖励
+            </summary>
+            <param name="countList"></param>
+            <param name="timeTag"></param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.PushMysteriousAwardeInfo(System.Collections.Generic.Dictionary{System.String,System.Int32},System.String,System.Boolean)">
+            <summary>
+            请求特种奖励
+            </summary>
+            <param name="userIdCountAwardList"></param>
+            <param name="mysterious"></param>
+            <param name="timeTag"></param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightUnityComponent_LAM.Dispose">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightLAM.Start(System.String,System.String,System.Int32,System.String[])">
+            <summary>
+            启动 Look At Me 服务
+            </summary>
+            <param name="url">接口Url</param>
+            <param name="token">调用方的授权码</param>
+            <param name="gameId">游戏不同，该值由游戏制作方确定</param>
+            <param name="deviceIds">设备编号，如果不填自动获取 MAC</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Component.JisightLAM.m_SocketEventFirCallBack(System.Object,Qy_CSharp_NetWork.Qy_Socket.SocketClieCtrlEventArgs)">
+            <summary>
+            事件选择器
+            </summary>
+            <param name="sender">私有变量m_SocketClientController</param>
+            <param name="args">应用层参数</param>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE">
+            <summary>
+            数据状态码
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.ERROR_TRIGGER_CODE">
+            <summary>
+            连接层出现问题
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_BUILD_ROOM_T">
+            <summary>
+            建房成功
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_BUILD_ROOM_F">
+            <summary>
+            建房失败
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_ROOM_VERIFY_T">
+            <summary>
+            房间验证成功
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_ROOM_VERIFY_F">
+            <summary>
+            房间验证失败
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_ROOM_STATUS_T">
+            <summary>
+            推送房间状态成功
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_ROOM_STATUS_F">
+            <summary>
+            推送房间状态失败
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_SUMMARIZE_T">
+            <summary>
+            发送汇总成功
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_SUMMARIZE_F">
+            <summary>
+            发送汇总失败
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_AWARD_LIST_T">
+            <summary>
+            请求奖励成功
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_AWARD_LIST_F">
+            <summary>
+            请求奖励失败
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_CUSTOM_MSG_T">
+            <summary>
+            自定义信息接收成功
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.DATA_CUSTOM_MSG_F">
+            <summary>
+            自定义信息接收失败
+            </summary>
+        </member>
+        <member name="F:Qy_CSharp_NetWork.Component.DATA_STATUS_CODE.LINK_USER_BROKEN">
+            <summary>
+            有链接断开
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.Component.LAMEventArgs">
+            <summary>
+            可用于外部参考的 请求返回 状态信息类
+            </summary>
+        </member>
+        <member name="P:Qy_CSharp_NetWork.Component.LAMEventArgs.status">
+            <summary>
+             数据状态码
+            </summary>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.DataFormat.JisightLAM.JsonDataHandle.WebDataHandle(System.String,Qy_CSharp_NetWork.DataFormat.JisightLAM.MsgFromMaster@)">
+            <summary>
+            主控服务器返回值的数据解析 
+            </summary>
+            <param name="message">返回数据</param>
+            <param name="msgFromMaster">外部应用数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.DataFormat.JisightLAM.IType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.DataFormat.JisightLAM.IVerify">
+            <summary>
+            消息确认回复：用于Debug
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.DataFormat.JisightLAM.ITime">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.DataFormat.JisightLAM.IToWhere">
+            <summary>
+            发送的消息是给谁？
+                "HostSever"     ---     主控服务器
+                "GameSever"     ---     游戏服务器
+                "Calculator"    ---     计算端
+                "userId"        ---     手机端玩家UserId
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.DataFormat.JisightLAM.IMessage">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.Qy_Socket.Transmission.SocketAnsynParam">
+            <summary>
+            用于数据传输的结构: 该结构的定义主要用于在回调时所能排除一些回调空引用。
+            考虑：  如果程序结束，回调参数是否为空？若为空其执行代码必然空引用。
+                    endConnect\endReceive\endSend所在的线程是否已被杀死？
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.Qy_Socket.Transmission.ClientSocket">
+            <summary>
+            客户端Socket类，定义了一些基础Socket操作。
+            TODO：考虑将来对UDP、线程堵塞式、文件流的扩展。
+            </summary>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.Transmission.ClientSocket.#ctor(System.Net.Sockets.AddressFamily,System.Net.Sockets.SocketType,System.Net.Sockets.ProtocolType)">
+            <summary>
+            构造函数、参数选填。当不填写参数，采用默认值：
+            AddressFamily.InterNetwork、SocketType.Stream、ProtocolType.Tcp
+            </summary>
+            <param name="addressFamily">当不填写参数，采用默认值：AddressFamily.InterNetwork</param>
+            <param name="soketType">当不填写参数，采用默认值：SocketType.Stream</param>
+            <param name="protocolType">当不填写参数，采用默认值：ProtocolType.Tcp</param>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.Qy_Socket.Transmission.FIRING_D_C_F">
+            <summary>
+            事件触发类型：0-不触发，1-出发完成，2-触发失败
+            </summary>
+            
+        </member>
+        <member name="T:Qy_CSharp_NetWork.Qy_Socket.EVENT_TYPE">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.Qy_Socket.COMPLETE_OR_FAILED">
+            <summary>
+            成功和失败的标记
+            </summary>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.SocketClientController.m_StartConnectedCompleteCallBack(Qy_CSharp_NetWork.Qy_Socket.Base.ISocketQy,Qy_CSharp_NetWork.Qy_Socket.Base.ISocketTransEventArgs)">
+            <summary>
+            非协议内连接事件回调
+            </summary>
+            <param name="sender">触发该事件的SocketQY</param>
+            <param name="eventArgs">参数</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.SocketClientController.m_StartConnectedFailedCallBack(Qy_CSharp_NetWork.Qy_Socket.Base.ISocketQy,Qy_CSharp_NetWork.Qy_Socket.Base.ISocketTransEventArgs)">
+            <summary>
+            非协议内连接事件回调
+            </summary>
+            <param name="sender">触发该事件的SocketQY</param>
+            <param name="eventArgs">参数</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.SocketClientController.m_ProtocolSendCompleteCallback(Qy_CSharp_NetWork.Qy_Socket.Base.ISocketQy,Qy_CSharp_NetWork.Qy_Socket.Base.ISocketSndEventArgs)">
+            <summary>
+            协议发送事件失败回调
+            </summary>
+            <param name="sender">触发该事件的SocketQY</param>
+            <param name="eventArgs">参数</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.SocketClientController.m_ProtocolSendFailedCallback(Qy_CSharp_NetWork.Qy_Socket.Base.ISocketQy,Qy_CSharp_NetWork.Qy_Socket.Base.ISocketSndEventArgs)">
+            <summary>
+            协议发送事件失败回调
+            </summary>
+            <param name="sender">触发该事件的SocketQY</param>
+            <param name="eventArgs">参数</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.SocketClientController.m_ProtocolRecvCompleteCallback(Qy_CSharp_NetWork.Qy_Socket.Base.ISocketQy,Qy_CSharp_NetWork.Qy_Socket.Base.ISocketRecEventArgs)">
+            <summary>
+            协议发送事件失败回调
+            </summary>
+            <param name="sender">触发该事件的SocketQY</param>
+            <param name="eventArgs">参数</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.SocketClientController.m_ProtocolRecvFailedCallback(Qy_CSharp_NetWork.Qy_Socket.Base.ISocketQy,Qy_CSharp_NetWork.Qy_Socket.Base.ISocketRecEventArgs)">
+            <summary>
+            协议发送事件失败回调
+            </summary>
+            <param name="sender">触发该事件的SocketQY</param>
+            <param name="eventArgs">参数</param>
+        </member>
+        <member name="M:Qy_CSharp_NetWork.Qy_Socket.OriginalDataUserTransProtocol.HeadBodyTcpProtocol.SendMessage(System.Byte[])">
+            <summary>
+            Jisight数据发送规则
+            </summary>
+            <param name="bytes">发送数据</param>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.WebNet.Transmission.FIRING_D_C_F">
+            <summary>
+            事件触发类型：0-不触发，1-出发完成，2-触发失败
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.WebNet.OriginalDataUserTransProtocol.WebKeepOrigDataProtocol">
+            <summary>
+            本类为默认处理协议：数据不经过加工，直接抛出
+            </summary>
+        </member>
+        <member name="T:Qy_CSharp_NetWork.WebNet.WebRequestArgsQy">
+            <summary>
+            机制内传参信息，不可暴露到外部
+            </summary>
+        </member>
+    </members>
+</doc>
